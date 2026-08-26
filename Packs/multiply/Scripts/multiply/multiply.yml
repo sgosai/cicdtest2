@@ -3,7 +3,7 @@ args:
 - name: num2
 commonfields:
   id: 'multiply'
-  version: -1
+  version: 5
 dockerimage: demisto/python3:3.12.13.10404775
 enabled: true
 engineinfo: {}
