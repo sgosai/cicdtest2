@@ -7,6 +7,7 @@ commonfields:
 dockerimage: demisto/python3:3.12.13.10404775
 enabled: true
 engineinfo: {}
+fromversion: 5.0.0
 mainengineinfo: {}
 name: multiply
 outputs:
