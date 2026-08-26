@@ -22,5 +22,6 @@ def test_multiply_logic(args, expected_value):
     # Assert the outputs match expected behavior
     # assert result.outputs['Value'] == expected_value
     # assert f'The result is {expected_value}' in result.readable_output
-    assert result == expected_value
+    # assert result == expected_value
+    assert 3 == 4
     # assert f'The result is {expected_value}' in result.readable_output
