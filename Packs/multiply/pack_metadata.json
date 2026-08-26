@@ -1,0 +1,21 @@
+{
+    "name": "multiply",
+    "description": "multiplies numbers",
+    "support": "community",
+    "currentVersion": "1.0.0",
+    "author": "SG",
+    "url": "https://live.paloaltonetworks.com/t5/cortex-xsoar-discussions/bd-p/Cortex_XSOAR_Discussions",
+    "email": "",
+    "categories": [
+        "Utilities"
+    ],
+    "tags": [],
+    "useCases": [],
+    "keywords": [],
+    "marketplaces": [
+        "xsoar",
+        "marketplacev2"
+    ],
+    "firstCreated": "2026-08-26T11:43:12Z",
+    "githubUser": []
+}
