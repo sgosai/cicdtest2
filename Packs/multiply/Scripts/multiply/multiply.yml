@@ -23,3 +23,5 @@ signature: ""
 subtype: python3
 tags: []
 type: python
+tests:
+- multiply_Test
