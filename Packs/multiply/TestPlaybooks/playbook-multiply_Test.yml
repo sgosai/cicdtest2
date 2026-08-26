@@ -130,7 +130,7 @@ tasks:
             iscontext: true
           right:
             value:
-              simple: "7"
+              simple: "8"
     continueonerrortype: ""
     view: |-
       {
