@@ -123,11 +123,10 @@ jobs:
           else
             echo "No packs has changed, skipping step."
           fi
-      - name: Run Test Playbooks
+      - name: Run Test Playbook
         env:
           DEMISTO_BASE_URL: ${{ secrets.DEMISTO_BASE_URL }}
           DEMISTO_API_KEY: ${{ secrets.DEMISTO_API_KEY }}
-          # For Cortex XSOAR 8 and Cortex XSIAM add the following variable:
-          DEMISTO_API_KEY_ID: ${{ secrets.DEMISTO_API_KEY_IDD }}
-        run : |
+          DEMISTO_API_KEY_ID: ${{ secrets.DEMISTO_API_KEY_ID }}
+        run: |
           demisto-sdk run-test-playbook -tpb Packs/multiply/TestPlaybooks/HelloWorld_Test.yml
