@@ -89,7 +89,7 @@ jobs:
           DEMISTO_BASE_URL: ${{ secrets.DEMISTO_BASE_URL }}
           DEMISTO_API_KEY: ${{ secrets.DEMISTO_API_KEY }}
           # For Cortex XSOAR 8 and Cortex XSIAM add the following variable:
-          XSIAM_AUTH_ID: ${{ vars.XSIAM_AUTH_ID }}
+          DEMISTO_API_KEY_ID: ${{ secrets.DEMISTO_API_KEY_ID }}
         run : |
           if [ $PACKS_CHANGED ]; then
             if [ $BRANCH_NAME == ${DEFAULT_BRANCH} ]; then
