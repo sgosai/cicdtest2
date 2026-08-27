@@ -6,10 +6,10 @@ starttaskid: "0"
 tasks:
   "0":
     id: "0"
-    taskid: 7913fb5b-792a-43b2-8a4f-71cb64ba6317
+    taskid: f431420f-3188-4bab-8a23-2be9a65f0417
     type: start
     task:
-      id: 7913fb5b-792a-43b2-8a4f-71cb64ba6317
+      id: f431420f-3188-4bab-8a23-2be9a65f0417
       version: -1
       name: ""
       iscommand: false
@@ -22,7 +22,7 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 50,
+          "x": 265,
           "y": 50
         }
       }
@@ -35,10 +35,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "1":
     id: "1"
-    taskid: 22ceefb0-cca5-4740-82f2-300c5e8fba21
+    taskid: 29c60c13-8cb4-4295-8a30-e16babe74f7c
     type: regular
     task:
-      id: 22ceefb0-cca5-4740-82f2-300c5e8fba21
+      id: 29c60c13-8cb4-4295-8a30-e16babe74f7c
       version: -1
       name: DeleteContext
       script: DeleteContext
@@ -56,8 +56,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 50,
-          "y": 200
+          "x": 265,
+          "y": 210
         }
       }
     note: false
@@ -69,10 +69,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "2":
     id: "2"
-    taskid: c7e081fa-71d4-4eb3-a25e-01ce6982bfe2
+    taskid: 8b162c3e-e149-4b31-837b-943eeef08272
     type: regular
     task:
-      id: c7e081fa-71d4-4eb3-a25e-01ce6982bfe2
+      id: 8b162c3e-e149-4b31-837b-943eeef08272
       version: -1
       name: Helloworld
       description: Hello command - prints hello to anyone.
@@ -93,8 +93,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 50,
-          "y": 400
+          "x": 265,
+          "y": 385
         }
       }
     note: false
@@ -106,18 +106,20 @@ tasks:
     isautoswitchedtoquietmode: false
   "3":
     id: "3"
-    taskid: 331724d3-e084-444c-b212-8cf8439e4127
+    taskid: 5fe9f5ab-3795-48b0-8409-12b7500861ea
     type: condition
     task:
-      id: 331724d3-e084-444c-b212-8cf8439e4127
+      id: 5fe9f5ab-3795-48b0-8409-12b7500861ea
       version: -1
       name: Verify Outputs
       type: condition
       iscommand: false
       brand: ""
     nexttasks:
+      '#default#':
+      - "6"
       "yes":
-      - "4"
+      - "5"
     separatecontext: false
     conditions:
     - label: "yes"
@@ -134,8 +136,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 50,
-          "y": 600
+          "x": 265,
+          "y": 560
         }
       }
     note: false
@@ -147,10 +149,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "4":
     id: "4"
-    taskid: 0672c6d3-da78-4db0-8efd-7a5cd8952718
+    taskid: bc08c130-1aa1-4585-8fa4-eb5b51a30997
     type: title
     task:
-      id: 0672c6d3-da78-4db0-8efd-7a5cd8952718
+      id: bc08c130-1aa1-4585-8fa4-eb5b51a30997
       version: -1
       name: Test Done
       type: title
@@ -161,8 +163,78 @@ tasks:
     view: |-
       {
         "position": {
+          "x": 265,
+          "y": 910
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "5":
+    id: "5"
+    taskid: f4cc121d-c304-451e-8b6a-2dc006569090
+    type: regular
+    task:
+      id: f4cc121d-c304-451e-8b6a-2dc006569090
+      version: -1
+      name: It worked!
+      description: Prints text to war room (Markdown supported)
+      scriptName: Print
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "4"
+    scriptarguments:
+      value:
+        simple: It worked!
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 735
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "6":
+    id: "6"
+    taskid: f56fa50b-8895-45b7-9b31-1bd73a11691b
+    type: regular
+    task:
+      id: f56fa50b-8895-45b7-9b31-1bd73a11691b
+      version: -1
+      name: It did not work!
+      description: Prints text to war room (Markdown supported)
+      scriptName: Print
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "4"
+    scriptarguments:
+      value:
+        simple: It did not work!
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
           "x": 50,
-          "y": 800
+          "y": 735
         }
       }
     note: false
@@ -177,8 +249,8 @@ view: |-
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 810,
-        "width": 380,
+        "height": 920,
+        "width": 810,
         "x": 50,
         "y": 50
       }
