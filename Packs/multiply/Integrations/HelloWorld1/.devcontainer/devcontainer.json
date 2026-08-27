@@ -1,0 +1,32 @@
+{
+    "name": "XSOAR Integration",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "IMAGENAME": "devtestdemisto/python3:3.12.13.10116658-1a33836a668524cf8598bf4adfce173b",
+        },
+    },
+    "remoteEnv": {
+        "MYPYPATH": "/workspaces/content/.:/workspaces/content/Packs/Base/Scripts/CommonServerPython:/workspaces/content/Tests/demistomock:/workspaces/content/.venv/lib/python3.14/site-packages/demisto_sdk/commands/pre_commit/resources/pylint_plugins",
+        "PYTHONPATH": "/workspaces/content/.:/workspaces/content/Packs/Base/Scripts/CommonServerPython:/workspaces/content/Tests/demistomock:/workspaces/content/.venv/lib/python3.14/site-packages/demisto_sdk/commands/pre_commit/resources/pylint_plugins",
+    },
+    "containerUser": "demisto",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.PowerShell",
+                "cortexxsoarext.xsoar",
+                "eamodio.gitlens",
+                "GitHub.vscode-pull-request-github",
+                "njpwerner.autodocstring",
+                "streetsidesoftware.code-spell-checker",
+                "littlefoxteam.vscode-python-test-adapter",
+            ],
+            "settings": {
+                "git.openRepositoryInParentFolders": "always",
+            },
+        },
+    },
+    "onCreateCommand": "cp launch.json ../.vscode/launch.json && cp settings.json ../.vscode/settings.json",
+}
